@@ -1,0 +1,34 @@
+:root {
+  --bgprimary: rgb(34, 29, 29);
+  --white: #fff;
+}
+
+button.back-to-home {
+  background-color: color-mix(in lab, var(--bgprimary) 80%, var(--white) 20%);
+  border: 1px solid var(--bgprimary);
+  margin-block: 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  color: var(--white);
+  font-family: "Trebuchet MS";
+  font-weight: 600;
+  box-shadow: 0 3px 0 var(--bgprimary);
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 0 5px 0 var(--bgprimary);
+  }
+
+  a {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 15px;
+    gap: 0.8rem;
+    color: currentColor;
+    text-decoration: none;
+  }
+}
