@@ -1,5 +1,4 @@
-# codebyrk
-SCSS Utility Mixins and Layout Snippets
+# SCSS Utility Mixins and Layout Snippets
 
 This repository contains a collection of SCSS mixins and utility functions for handling breakpoints, generating utility classes, and simplifying layout styling. These snippets help maintain a modular, reusable, and scalable SCSS codebase.
 
