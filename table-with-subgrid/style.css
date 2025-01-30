@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  padding: 25px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.subgrid {
+  display: grid;
+  grid-template-columns: minmax(400px, 2fr) repeat(5, minmax(200px, 1fr));
+}
+
+.header {
+  background-color: #5166b1;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+
+  & > * {
+    background-color: #5166b1;
+    border-right: 1px solid #ccc;
+    padding: 0.5rem;
+  }
+
+  .header-1-col-2 {
+    grid-column: span 3;
+    text-align: center;
+  }
+
+  .header-1-col-3 {
+    grid-column: span 2;
+    text-align: center;
+  }
+}
+
+.body {
+  .row-subgrid {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: span 6;
+  }
+
+  .body-row-wrapper {
+    border-bottom: 1px solid #ccc;
+    padding: 0;
+  }
+
+  .body-row {
+    background-color: aliceblue;
+    border-left: 1px solid #ccc;
+
+    & > * {
+      border-right: 1px solid #ccc;
+      padding: 0.5rem;
+    }
+  }
+
+  .body-child-row {
+    border-top: 1px solid #ccc;
+    background-color: aquamarine;
+    padding-left: 20px;
+    border-left: 1px solid #ccc;
+
+    & > * {
+      border-right: 1px solid #ccc;
+      padding: 0.5rem;
+    }
+  }
+}
+
+/* back button */
+
+button.back-to-home {
+  --bgprimary: rgb(34, 29, 29);
+  --white: #fff;
+
+  background-color: color-mix(in lab, var(--bgprimary) 80%, var(--white) 20%);
+  border: 1px solid var(--bgprimary);
+  margin-block: 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  color: var(--white);
+  font-family: "Trebuchet MS";
+  font-weight: 600;
+  box-shadow: 0 3px 0 var(--bgprimary);
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 0 5px 0 var(--bgprimary);
+  }
+
+  a {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 15px;
+    gap: 0.8rem;
+    color: currentColor;
+    text-decoration: none;
+  }
+}
